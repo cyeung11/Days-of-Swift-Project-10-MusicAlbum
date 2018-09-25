@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6qr-Bj-5O0">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6qr-Bj-5O0">
                                 <rect key="frame" x="0.0" y="64" width="375" height="240"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -41,16 +41,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJZ-Ui-K08">
-                                                    <rect key="frame" x="4" y="4" width="42" height="42"/>
+                                                    <rect key="frame" x="8" y="8" width="34" height="34"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="kJZ-Ui-K08" secondAttribute="trailing" constant="4" id="Sf3-GD-9dj"/>
-                                            <constraint firstItem="kJZ-Ui-K08" firstAttribute="leading" secondItem="Tr6-Pk-CLB" secondAttribute="leading" constant="4" id="eaP-eO-0Na"/>
-                                            <constraint firstAttribute="bottom" secondItem="kJZ-Ui-K08" secondAttribute="bottom" constant="4" id="klo-Tq-gY2"/>
-                                            <constraint firstItem="kJZ-Ui-K08" firstAttribute="top" secondItem="Tr6-Pk-CLB" secondAttribute="top" constant="4" id="yc1-x2-LSP"/>
+                                            <constraint firstAttribute="trailing" secondItem="kJZ-Ui-K08" secondAttribute="trailing" constant="8" id="Sf3-GD-9dj"/>
+                                            <constraint firstItem="kJZ-Ui-K08" firstAttribute="leading" secondItem="Tr6-Pk-CLB" secondAttribute="leading" constant="8" id="eaP-eO-0Na"/>
+                                            <constraint firstAttribute="bottom" secondItem="kJZ-Ui-K08" secondAttribute="bottom" constant="8" id="klo-Tq-gY2"/>
+                                            <constraint firstItem="kJZ-Ui-K08" firstAttribute="top" secondItem="Tr6-Pk-CLB" secondAttribute="top" constant="8" id="yc1-x2-LSP"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="albumPic" destination="kJZ-Ui-K08" id="OpR-qf-o5m"/>
@@ -163,7 +163,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem enabled="NO" systemItem="undo" id="Cqe-vL-Fok"/>
+                        <barButtonItem enabled="NO" systemItem="undo" id="Cqe-vL-Fok">
+                            <connections>
+                                <action selector="undoTrash:" destination="BYZ-38-t0r" id="DPd-DL-VFv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem systemItem="flexibleSpace" id="65g-73-VSz"/>
                         <barButtonItem enabled="NO" systemItem="trash" id="auz-CA-rvg">
                             <connections>

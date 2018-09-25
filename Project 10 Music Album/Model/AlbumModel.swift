@@ -12,7 +12,10 @@ struct AlbumModel {
     var albums: [Album]?
 
     init() {
-        if let url = Bundle.main.url(forResource: "albums", withExtension: "json"), let data = try? Data(contentsOf: url){
+        let savedAlbums = FileHelper.default.read(fileName: "albums", as: [Album].self, fromCache: false)
+        if let savedAlbums = savedAlbums{
+            albums = savedAlbums
+        } else if let url = Bundle.main.url(forResource: "albums", withExtension: "json"), let data = try? Data(contentsOf: url){
             albums = try? JSONDecoder().decode([Album].self, from: data)
         }
     }
